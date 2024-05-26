@@ -7,7 +7,7 @@
 :root {
   --h1: 3.5rem;
   --h3: 1.7rem;
-  --h4: 1.2rem;
+  --h4: 1.4rem;
 
   --color-one: #ffe556;
   --color-two: #00bcf0;
@@ -22,6 +22,13 @@
   --color-tetradic-5: #ff56c4;
 
   --font-fam: "Poppins", sans-serif;
+
+  /* Button */
+  --btn-color: #9176ff;
+  --dark-color: #2b2b2b;
+  --dark-icon-color: #fff;
+  --light-color: snow;
+  --light-icon-color: #ffe556;
 }
 
 body {
@@ -29,22 +36,27 @@ body {
   color: #fff;
 }
 
+a {
+  color: #fff;
+}
+
 .wrapper {
   width: 100%;
   max-width: 1500px;
   margin: 5px auto;
+  position: relative;
 }
 
 #header {
-  display: block;
-  width: 50%;
+  display: flex;
+  width: 70%;
   position: sticky;
-  top: 0;
-  background-color: #0a0a0a;
-  border-radius: 20px;
+  top: 10px;
+  border-radius: 80px;
   margin: auto;
   opacity: 1;
   z-index: 2;
+  background-color: #000;
 }
 
 .nav {
@@ -63,9 +75,11 @@ body {
 }
 
 .nav-li-a:hover {
-  background-color: #303539;
+  background-color: snow;
+  color: #000;
   border-radius: 20px;
   width: 100%;
+  height: 100%;
 }
 
 .nav-li-a:focus {
@@ -89,6 +103,125 @@ h3 {
 
 h4 {
   font-size: var(--h4);
+}
+
+/* Dark/Light Theme Button */
+
+.btn {
+  background-color: #fff;
+  width: 5.5em;
+  height: 3em;
+  border-radius: 10em;
+  /* padding: 0 0.5em; */
+
+  box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.3) inset 0 8px 8px
+    rgba(0, 0, 0, 0.3) inset 0 -4px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: auto 0 auto 190px;
+
+  cursor: pointer;
+}
+
+.btn-indicator {
+  background-color: #fff;
+  width: 3em;
+  height: 3em;
+  border: 2px solid #000;
+  border-radius: 50%;
+  position: absolute;
+
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+
+  transition: transform 0.3s ease;
+}
+
+.btn-icon-container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-icon {
+  color: var(--light-icon-color);
+  font-size: 2.5rem;
+}
+
+/* Light-Mode Animation  */
+
+.btn-icon.animated {
+  animation: spin 0.5s;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* LIGHT-MODE */
+
+body.light-mode {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.light-mode #header {
+  background-color: snow;
+}
+
+.light-mode .btn {
+  background-color: #000;
+  box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.3) inset 0 8px 8px
+    rgba(0, 0, 0, 0.3) inset 0 -4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.light-mode .nav-li-a:hover {
+  background-color: #303539;
+  color: snow;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.light-mode .nav-li-a {
+  color: #000;
+}
+
+.light-mode .design-ui {
+  border-left: 1px solid #000;
+}
+
+.light-mode .ui-dot {
+  background-color: #000;
+}
+
+.light-mode .social-btn,
+.light-mode .contact-btn {
+  background-color: snow;
+  border: 1px solid black;
+}
+
+.light-mode .social-links a,
+.light-mode .contact-links a {
+  color: #000;
+}
+
+.light-mode .btn-indicator {
+  transform: translateX(3em);
+  background-color: var(--dark-color);
+  border: 2px solid snow;
+}
+
+.light-mode .btn-icon {
+  color: var(--light-icon-color);
+}
+
+.light-mode .ui-dot-sections {
+  background-color: #000;
 }
 
 /* UI lights */
@@ -305,14 +438,17 @@ h4 {
   border: 1px solid;
   margin: 20px;
   color: #000;
-  width: 500px;
-  height: 500px;
-  margin: 20px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
 }
 
-video {
-  width: 400px;
-  height: 300px;
+.project-case:hover {
+  background-color: #000;
+  background-image: none;
+  border: 1px solid snow;
+  color: #fff;
 }
 
 .project-one {
@@ -337,8 +473,89 @@ video {
   );
 }
 
-figcaption {
+.project-three {
+  background-image: linear-gradient(
+    to right,
+    #ffe556,
+    #baf177,
+    #73f4aa,
+    #16f0dc,
+    #00e7ff
+  );
+}
+
+.project-four {
+  background-image: linear-gradient(
+    to right,
+    #ffe556,
+    #baf177,
+    #73f4aa,
+    #16f0dc,
+    #00e7ff
+  );
+}
+
+.project-five {
+  background-image: linear-gradient(
+    to right,
+    #ffe556,
+    #baf177,
+    #73f4aa,
+    #16f0dc,
+    #00e7ff
+  );
+}
+
+.project-six {
+  background-image: linear-gradient(
+    to right,
+    #ffe556,
+    #baf177,
+    #73f4aa,
+    #16f0dc,
+    #00e7ff
+  );
+}
+
+.project-links {
+  display: flex;
   text-align: center;
+  align-items: center;
+  justify-content: end;
+  flex: 1;
+  color: #fff;
+}
+
+.project-links a {
+  color: #000;
+  width: 50px;
+  padding: 15px;
+}
+
+.project-links a:hover {
+  color: snow;
+  width: 50px;
+  padding: 15px;
+}
+
+.project-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 4;
+}
+
+.web-tech {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.web-tech i {
+  padding: 15px;
 }
 
 /* Contact */
@@ -349,40 +566,76 @@ figcaption {
   padding: 100px 0 0 0;
 }
 
-.contact-container {
+.social-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-links {
   display: flex;
   width: 100%;
-  height: 500px;
-  margin: auto;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
-}
-
-.contact-box {
-  display: flex;
-  flex-direction: row;
-  width: 500px;
-  justify-content: space-evenly;
-  border-radius: 20px;
-  align-items: center;
-  background-color: rgb(10, 10, 15);
-}
-
-button a {
-  padding: 25px;
+  justify-content: center;
   color: #fff;
 }
-
-i,
-p {
-  display: inline-flex;
-  margin: 0 50px;
-  align-items: center;
+.social-btn {
+  border-radius: 80px;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  padding: 20px;
 }
 
-.contact-box p {
-  font-size: 1.5rem;
+.discord-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  height: 70px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-links {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin: 100px 0 0 0;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  height: 100px;
+  border-radius: 80px;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  padding: 20px;
+}
+
+.linkedin-link,
+.hire-me-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  height: 70px;
+}
+
+.sub-section-title {
+  font-size: 1.1rem;
+}
+
+.social-titles {
+  font-size: 1.2rem;
+}
+.contact-titles {
+  font-size: 1.4rem;
 }
 
 #footer {

@@ -3,14 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Site</title>
+    <title>Official Portfolio</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
+    />
+
+    <!-- button: for dark theme -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
     <script
@@ -33,6 +42,13 @@
             </li>
           </ul>
         </nav>
+        <div id="theme" class="btn">
+          <div class="btn-indicator">
+            <div class="btn-icon-container">
+              <i class="btn-icon fa-solid fa-sun"></i>
+            </div>
+          </div>
+        </div>
       </header>
       <main id="main">
         <section id="home" class="home">
@@ -99,13 +115,15 @@
             <span class="ui-dot-sections"></span>
             <h3 class="hi">Hi, I'm Mohamed.</h3>
             <p>
-              I'm a xx year old self-taught aspiring software engineer (but a
-              frontend developer by day), I love coding with a love hate
-              relationship with javascript. this newfound passion for coding was
-              there when i was in college but due to other passions, i had to
-              put it in the backseat, but now i am really motivated to get
-              better and create things with my code and strive to become an
-              excellent software engineer. Join me on my journey.
+              I am a self-taught aspiring software engineer (but a frontend
+              developer by day), I love coding with a love hate relationship
+              with javascript. this newfound passion for coding was there when i
+              was in college but due to other passions, i had to put it in the
+              backseat, but now i am really motivated to get better and create
+              things with my code and strive to become an excellent software
+              engineer. <br />
+              <br />
+              Join me on my journey.
             </p>
           </article>
         </section>
@@ -117,26 +135,126 @@
             <h3 class="project-subtitle">Stuff I've Worked On</h3>
           </article>
           <article class="container-flex-projects">
-            <section class="project-uno">
-              <figure class="project-case project-one">
-                <img
-                  src="/pokemon.png"
-                  alt=""
-                  style="width: 500px; height: 500px"
-                />
-              </figure>
-              <figcaption>Pokemon Starter</figcaption>
+            <section class="project-case project-one">
+              <article class="project-links">
+                <a href="" id="github-link"
+                  ><i class="fa-brands fa-github fa-2x github-link"></i
+                ></a>
+                <a href="" class="site-link" id="live-link"
+                  ><i class="fa-solid fa-arrow-up-right-from-square fa-2x"></i
+                ></a>
+              </article>
+
+              <article class="project-preview">
+                <h2>Pokemon Starter</h2>
+              </article>
+              <article class="web-tech">
+                <i class="fa-brands fa-html5 fa-3x"></i>
+                <i class="fa-brands fa-css3-alt fa-3x"></i>
+              </article>
             </section>
-            <section class="project-duos">
-              <figure class="project-case project-two">
-                <img
-                  src="/chessboard.png"
-                  alt=""
-                  class="chess-icon"
-                  style="width: 500px; height: 500px"
-                />
-              </figure>
-              <figcaption>Chessboard</figcaption>
+
+            <section class="project-case project-two">
+              <article class="project-links">
+                <a
+                  href="https://github.com/OneCode-AA/chess-board"
+                  id="github-link"
+                  ><i class="fa-brands fa-github fa-2x github-link"></i
+                ></a>
+                <a href="" class="site-link" id="live-link"
+                  ><i class="fa-solid fa-arrow-up-right-from-square fa-2x"></i
+                ></a>
+              </article>
+
+              <article class="project-preview">
+                <h2>Chess Board</h2>
+              </article>
+              <article class="web-tech">
+                <i class="fa-brands fa-html5 fa-3x"></i>
+                <i class="fa-brands fa-css3-alt fa-3x"></i>
+              </article>
+            </section>
+
+            <section class="project-case project-three">
+              <!-- <article class="project-links">
+                <a href="" id="github-link"
+                  ><i
+                    class="fa-brands fa-github fa-2x github-link"
+                    
+                  ></i
+                ></a>
+                <a href="" class="site-link" id="live-link"
+                  ><i
+                    class="fa-solid fa-arrow-up-right-from-square fa-2x"
+                    
+                  ></i
+                ></a>
+              </article> -->
+
+              <article class="project-preview">
+                <h2>Coming Soon</h2>
+              </article>
+              <!-- <article class="web-tech">
+                <i class="fa-brands fa-html5 fa-3x"></i>
+                <i class="fa-brands fa-css3-alt fa-3x"></i>
+              </article> -->
+            </section>
+
+            <section class="project-case project-four">
+              <!-- <article class="project-links">
+                <a href="" id="github-link"
+                  ><i class="fa-brands fa-github fa-3x github-link" ></i
+                ></a>
+                <a href="" class="site-link" id="live-link">
+                  ><i class="fa-solid fa-arrow-up-right-from-square fa-3x" </i
+                ></a>
+              </article> -->
+
+              <article class="project-preview">
+                <h2>Coming Soon</h2>
+              </article>
+              <!-- <article class="web-tech">
+                <i class="fa-brands fa-html5 fa-3x"></i>
+                <i class="fa-brands fa-css3-alt fa-3x"></i>
+              </article> -->
+            </section>
+
+            <section class="project-case project-five">
+              <!-- <article class="project-links">
+                <a href="" id="github-link"
+                  ><i class="fa-brands fa-github fa-3x github-link" ></i
+                ></a>
+                <a href="" class="site-link" id="live-link"
+                  ><i class="fa-solid fa-arrow-up-right-from-square fa-3x" ></i
+                ></a>
+              </article> -->
+
+              <article class="project-preview">
+                <h2>Coming Soon</h2>
+              </article>
+              <!-- <article class="web-tech">
+                <i class="fa-brands fa-html5 fa-3x"></i>
+                <i class="fa-brands fa-css3-alt fa-3x"></i>
+              </article> -->
+            </section>
+
+            <section class="project-case project-six">
+              <!-- <article class="project-links">
+                <a href="" id="github-link"
+                  ><i class="fa-brands fa-github fa-3x github-link"></i
+                ></a>
+                <a href="" class="site-link" id="live-link"
+                  ><i class="fa-solid fa-arrow-up-right-from-square fa-3x" ></i
+                ></a>
+              </article> -->
+
+              <article class="project-preview">
+                <h2>Coming Soon</h2>
+              </article>
+              <!-- <article class="web-tech">
+                <i class="fa-brands fa-html5 fa-3x"></i>
+                <i class="fa-brands fa-css3-alt fa-3x"></i>
+              </article> -->
             </section>
           </article>
         </section>
@@ -146,19 +264,43 @@
             <span class="ui-dot-sections"></span
             ><span class="ui-dot-sections"></span
             ><span class="ui-dot-sections"></span>
-            <section class="contact-container">
-              <button class="linkedin contact-box">
-                <a href="https://www.linkedin.com/in/abooabdillaahmbj/"
-                  ><i class="fa-brands fa-linkedin fa-6x"> </i>
-                  <p class="contact-titles">LinkedIn</p></a
-                >
-              </button>
-              <button class="hireme contact-box">
-                <a href="mailto:abooabdillaah.mbj@gmail.com">
-                  <i class="fa-solid fa-at fa-6x"></i>
-                  <p class="contact-titles">Hire Me?</p>
-                </a>
-              </button>
+            <section class="social-contacts">
+              <article class="social-container">
+                <h5 class="sub-section-title">Here's my social sites:</h5>
+                <section class="social-links">
+                  <button class="discord social-btn">
+                    <a href="https://discord.gg/DmC4qkGn" class="discord-link">
+                      <i class="fa-brands fa-discord fa-2x"></i>
+
+                      <p class="social-titles">Discord</p>
+                    </a>
+                  </button>
+                </section>
+              </article>
+            </section>
+            <section class="contact-contacts">
+              <article class="contact-container">
+                <h5 class="sub-section-title">How to reach me:</h5>
+                <section class="contact-links">
+                  <button class="linkedin contact-btn">
+                    <a
+                      href="https://www.linkedin.com/in/abooabdillaahmbj/"
+                      class="linkedin-link"
+                      ><i class="fa-brands fa-linkedin fa-3x"> </i>
+                      <p class="contact-titles">LinkedIn</p></a
+                    >
+                  </button>
+                  <button class="hireme contact-btn">
+                    <a
+                      href="mailto: abooabdillaah.mbj@gmail.com"
+                      class="hire-me-link"
+                    >
+                      <i class="fa-solid fa-at fa-3x"></i>
+                      <p class="contact-titles">Hire Me?</p>
+                    </a>
+                  </button>
+                </section>
+              </article>
             </section>
           </article>
         </section>
@@ -167,5 +309,6 @@
         <p>&copy; 2024</p>
       </footer>
     </div>
+    <script src="scripts.js"></script>
   </body>
 </html>
