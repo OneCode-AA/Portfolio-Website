@@ -1,4 +1,4 @@
 # Portfolio-Website
 
 located here:
-https://onecode-aa.github.io/Portfolio-Website/
+https://portfolio-v1-mbj.netlify.app/
